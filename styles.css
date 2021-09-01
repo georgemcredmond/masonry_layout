@@ -1,0 +1,39 @@
+/* Stylesheet for Masonry Layout example project */
+
+main {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+main h2 {
+	text-align: center;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+div.masonry-layout {
+	column-count: 3;
+	column-gap: 20px;
+}
+
+div.item {
+	margin-bottom: 20px;
+	-webkit-column-break-inside:  avoid; /* chrome, safari, opera */
+	page-break-inside: avoid; /* for Firefox */
+	break-inside: avoid; /* IE 10 */
+}
+
+@media (max-width: 768px) {
+	div.masonry-layout {
+		column-count: 2;
+		column-gap: 10px;
+	}
+
+	div.item {
+		margin-bottom: 10px;
+	}
+}
